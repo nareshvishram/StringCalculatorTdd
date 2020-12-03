@@ -42,4 +42,9 @@ public class StringCalculatorTest {
 		sc.add("-1");
 		sc.add("-1,2\3");
 	}
+	@Test
+	public void skipGreaterThanThousand(){
+		assertEquals(10,sc.add("1,9\n10001"));
+		assertEquals(5,sc.add("1,4\n10001"));
+	}
 }

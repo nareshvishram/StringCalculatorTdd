@@ -2,7 +2,7 @@ package com.stringcalculator.tdd;
 
 public class StringCalculator {
 
-	private String pattern=",";
+	private String pattern=",|\n";
 	public int add(String string) {
 		if(string.length()==0)
 			return 0;
@@ -12,6 +12,8 @@ public class StringCalculator {
 	private int getSum(String[] str) {
 		int sum=0;
 		for(String s:str){
+			if(s.length()==0)
+				continue;
 			sum+=stringToInt(s);
 		}
 		return sum;

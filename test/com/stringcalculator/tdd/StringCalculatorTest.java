@@ -26,4 +26,9 @@ public class StringCalculatorTest {
 		assertEquals(100,sc.add("1,2,80,7,10"));
 		assertEquals(10,sc.add("9,1,0,0,0"));
 	}
+	@Test
+	public void newLineDelimeter(){
+		assertEquals(8,sc.add("1,\n7"));
+		assertEquals(28,sc.add("1,2,3,4,5,6,\n7"));
+	}
 }

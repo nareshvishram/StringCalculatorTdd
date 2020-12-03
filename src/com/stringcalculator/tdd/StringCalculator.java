@@ -19,7 +19,11 @@ public class StringCalculator {
 		return sum;
 	}
 	public int stringToInt(String string){
-		return  Integer.parseInt(string);
+		int num= Integer.parseInt(string);
+		if(num<0)
+			throw new IllegalArgumentException("Negatives Not Allowed") ;
+		else
+			return num;
 	}
 
 }
